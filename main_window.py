@@ -7,11 +7,11 @@ main_window.setWindowTitle("Memory card")
 main_window.move(300, 300)
 
 btn_menu = QPushButton("Меню")
-btn_sleep = ("Відпочити")
+btn_sleep = QPushButton("Відпочити")
 
-box_minets = QSpinBox()
-box_minets.setValue(30)
-box_minets_lbl = QLabel("хвилин")
+box_minutes = QSpinBox()
+box_minutes.setValue(30)
+box_minutes_lbl = QLabel("хвилин")
 
 question_lbl = QLabel("Question")
 
