@@ -50,3 +50,26 @@ result_line.addWidget(lbl_correct, alignment=(Qt.AlignCenter|Qt.AlignTop))
 result_line.addWidget(lbl_right,alignment=Qt.AlignCenter, stretch=3)
 result_group_box.setLayout(result_line)
 result_group_box.hide()
+
+btn_answer = QPushButton("Відповісти")
+
+line1 = QHBoxLayout()
+line1.addWidget(btn_menu)
+line1.addStretch(2)
+line1.addWidget(btn_sleep)
+line1.addWidget(box_minutes)
+line1.addWidget(box_minutes_lbl)
+
+main_line = QVBoxLayout()
+main_line.addLayout(line1)
+main_line.addWidget(question_lbl, alignment=(Qt.AlignCenter|Qt.AlignCenter))
+
+line2 = QHBoxLayout()
+line2.addWidget(answer_group_box)
+line2.addWidget(result_group_box)
+
+main_line.addLayout(line2, stretch=4)
+main_line.addWidget(btn_answer)
+main_line.addStretch(1)
+
+main_window.setLayout(main_line)
