@@ -2,27 +2,27 @@ from PyQt5.Qt import Qt
 from PyQt5.QtWidgets import QWidget, QPushButton, QLabel, QRadioButton, QSpinBox, QHBoxLayout, QVBoxLayout, QGroupBox, QButtonGroup
 
 main_window = QWidget()
-main_window.resize(600, 500)
+main_window.resize(600, 500)#даємо розміри вікна
 main_window.setWindowTitle("Memory card")
 main_window.move(300, 300)
 
 btn_menu = QPushButton("Меню")
 btn_sleep = QPushButton("Відпочити")
 
-box_minutes = QSpinBox()
+box_minutes = QSpinBox()#створюєм скільки хвилин іде опитування
 box_minutes.setValue(30)
 box_minutes_lbl = QLabel("хвилин")
 
-question_lbl = QLabel("Question")
+lbl_question = QLabel("Question")#створюємо запитання
 
-answer_group_box = QGroupBox("Варіанти відповідей")
+answer_group_box = QGroupBox("Варіанти відповідей")#робимо скільки буде варівнтів відповідей до запитання
 radio_buttons_group = QButtonGroup()
 r_btn1 = QRadioButton("1")
 r_btn2 = QRadioButton("2")
 r_btn3 = QRadioButton("3")
 r_btn4 = QRadioButton("4")
 
-radio_buttons_group.addButton(r_btn1)
+radio_buttons_group.addButton(r_btn1)#додаємо кнопки в групу
 radio_buttons_group.addButton(r_btn2)
 radio_buttons_group.addButton(r_btn3)
 radio_buttons_group.addButton(r_btn4)
@@ -31,7 +31,7 @@ v_line1 = QVBoxLayout()
 v_line2 = QVBoxLayout()
 h_line = QHBoxLayout()
 
-v_line1.addWidget(r_btn1)
+v_line1.addWidget(r_btn1)#додавання віджетів
 v_line1.addWidget(r_btn2)
 
 v_line2.addWidget(r_btn3)
@@ -53,7 +53,7 @@ result_group_box.hide()
 
 btn_answer = QPushButton("Відповісти")
 
-line1 = QHBoxLayout()
+line1 = QHBoxLayout()#робимо лінія вертикальну та горизонтальну і кладем на всі лінії книпки які створили
 line1.addWidget(btn_menu)
 line1.addStretch(2)
 line1.addWidget(btn_sleep)
@@ -62,7 +62,7 @@ line1.addWidget(box_minutes_lbl)
 
 main_line = QVBoxLayout()
 main_line.addLayout(line1)
-main_line.addWidget(question_lbl, alignment=(Qt.AlignCenter|Qt.AlignCenter))
+main_line.addWidget(lbl_question, alignment=(Qt.AlignCenter|Qt.AlignCenter))
 
 line2 = QHBoxLayout()
 line2.addWidget(answer_group_box)

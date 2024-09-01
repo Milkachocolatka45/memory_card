@@ -2,13 +2,13 @@ from PyQt5.Qt import Qt
 from PyQt5.QtWidgets import QWidget, QPushButton, QLabel, QHBoxLayout, QVBoxLayout, QLineEdit
 
 menu_window = QWidget()
-menu_window.resize(400, 300)
+menu_window.resize(400, 300)# створюємо розміри 
 menu_window.setWindowTitle("Memory card")
 menu_window.move(700, 300)
 
-question_lbl = QLabel("Введіть запитання:")
-right_ans_lbl = QLabel("Введіть правильну відповідь:")
-wrong_ans1_lbl = QLabel("Введіть неправильну відповідь:")
+question_lbl = QLabel("Введіть запитання:")# створюємо запитання 
+right_ans_lbl = QLabel("Введіть правильну відповідь:")#створюємо правильну відповідь
+wrong_ans1_lbl = QLabel("Введіть неправильну відповідь:")#створюємо неправильні відповіді
 wrong_ans2_lbl = QLabel("Введіть неправильну відповідь:")
 wrong_ans3_lbl = QLabel("Введіть неправильну відповідь:")
 
@@ -18,17 +18,17 @@ wrong_ans1_input = QLineEdit()
 wrong_ans2_input = QLineEdit()
 wrong_ans3_input = QLineEdit()
 
-btn_add = QPushButton("ДОдати запитання")
+btn_add = QPushButton("ДОдати запитання")# додаєм кнопкузапитання
 btn_clear = QPushButton("Очистити")
 
-lbl_start = QLabel("СТАТИСТИКА")
+lbl_start = QLabel("СТАТИСТИКА")#робим статистику жирной і великой щоб виділялася
 lbl_start.setStyleSheet("font-size: 20px;font-weight: bold;")
 
 statistics = QLabel()
 
-btn_back = QPushButton("Назад")
+btn_back = QPushButton("Назад")#робимо книпку назад щоб повертатися на другу сторінку
 
-col1 = QVBoxLayout()
+col1 = QVBoxLayout()#створення вертикальних ліній і кладання на них книпок
 col2 = QVBoxLayout()
 
 col1.addWidget(question_lbl)
