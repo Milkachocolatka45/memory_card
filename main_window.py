@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import QWidget, QPushButton, QLabel, QRadioButton, QSpinBox
 main_window = QWidget()
 main_window.resize(600, 500)#даємо розміри вікна
 main_window.setWindowTitle("Memory card")
-main_window.move(300, 300)
+
 
 btn_menu = QPushButton("Меню")
 btn_sleep = QPushButton("Відпочити")
